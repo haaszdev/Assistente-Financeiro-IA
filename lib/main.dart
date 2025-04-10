@@ -3,8 +3,10 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:intl/intl.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future<void> main() async {
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
@@ -176,8 +178,9 @@ void _listen() async {
         categories[t['category']] = (categories[t['category']] ?? 0) + t['amount'];
       }
 
-      const apiKey = 'AIzaSyBbNxkEwLKipQO8qaqWMb9afVbrTsEyxa8';
-      const apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=$apiKey';
+      var apiKey = dotenv.env['API_KEY'];
+      final apiUrl = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=$apiKey';
+
 
       final prompt = '''
       Você é um especialista em finanças pessoais. Analise estes dados e forneça:
