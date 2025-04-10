@@ -7,6 +7,36 @@ Um app Flutter simples e intuitivo para ajudar no controle de despesas e receita
 ![Gemini](https://img.shields.io/badge/Google-Gemini-yellow?style=for-the-badge&logo=google)
 
 ---
+### 🧠 Prompt Utilizado
+
+Este projeto utiliza como base o seguinte prompt para orientação da IA:
+
+> "Você é um especialista em finanças pessoais. Analise estes dados e forneça:  
+> 1. Um resumo financeiro claro (máximo 3 linhas)  
+> 2. 3 recomendações específicas baseadas nos padrões de gastos  
+> 3. Alertas sobre possíveis problemas financeiros  
+> 4. Sugestões de economia personalizadas  
+>
+> Formate a resposta com tópicos e use emojis para melhorar a legibilidade.  
+>
+> Dados do usuário:  
+> - Receitas totais: R\$[valor]  
+> - Despesas totais: R\$[valor]  
+> - Saldo atual: R\$[valor]  
+> - Distribuição de gastos: [categoria: valor, ...]"
+
+Este prompt é utilizado por uma IA (como o Gemini) para analisar os dados financeiros do usuário e gerar relatórios personalizados com sugestões práticas de economia e alertas financeiros.
+
+---
+
+### 🎯 Público-Alvo
+
+A aplicação foi desenvolvida pensando em:
+
+- **Estudantes** e **pesquisadores** interessados em Integração de IA a apps.
+- **Usuários gerais** que buscam organizar suas despesas.
+
+---
 
 ## 📱 Screenshots
 
